@@ -1,2 +1,2 @@
 # Perros-vs-gatos
-Ia diferencia entre fotos de gatos y perros
+# Aqui pujaré el procés de la meva AI que identificarà entre gossos i gats
