@@ -14,13 +14,13 @@ def download_file(url, filename):
 # Verificar si los archivos existen y descargarlos si no es así
 if not os.path.exists("model_gats_gossos.json") or not os.path.exists("model_gats_gossos.weights.h5"):
     st.info("⚠️ Descargando los archivos del modelo desde GitHub...")
-    # Asegúrate de colocar la URL correcta a tus archivos en GitHub
-    json_url = 'https://github.com/tu_usuario/tu_repositorio/raw/main/models/model_gats_gossos.json'
-    weights_url = 'https://github.com/tu_usuario/tu_repositorio/raw/main/models/model_gats_gossos.weights.h5'
+    # Reemplaza con las URLs correctas de tus archivos en GitHub
+    json_url = 'https://github.com/Ayuste01/tu_repositorio/raw/main/model_gats_gossos.json'  # Reemplaza esta URL
+    weights_url = 'https://github.com/Ayuste01/tu_repositorio/raw/main/model_gats_gossos.weights.h5'  # Reemplaza esta URL
     
     # Descargar los archivos
-    json_url = 'https://github.com/Ayuste01/tu_repositorio/raw/main/model_gats_gossos.json'
-    weights_url = 'https://github.com/Ayuste01/tu_repositorio/raw/main/model_gats_gossos.weights.h5'
+    download_file(json_url, 'model_gats_gossos.json')
+    download_file(weights_url, 'model_gats_gossos.weights.h5')
 
 # Cargar el modelo
 with open("model_gats_gossos.json", "r") as json_file:
