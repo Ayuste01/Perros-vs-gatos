@@ -19,8 +19,8 @@ if not os.path.exists("model_gats_gossos.json") or not os.path.exists("model_gat
     weights_url = 'https://github.com/tu_usuario/tu_repositorio/raw/main/models/model_gats_gossos.weights.h5'
     
     # Descargar los archivos
-    download_file(json_url, 'model_gats_gossos.json')
-    download_file(weights_url, 'model_gats_gossos.weights.h5')
+    json_url = 'https://github.com/Ayuste01/tu_repositorio/raw/main/model_gats_gossos.json'
+    weights_url = 'https://github.com/Ayuste01/tu_repositorio/raw/main/model_gats_gossos.weights.h5'
 
 # Cargar el modelo
 with open("model_gats_gossos.json", "r") as json_file:
