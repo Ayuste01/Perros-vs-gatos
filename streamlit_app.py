@@ -5,7 +5,7 @@ import numpy as np
 from PIL import Image, UnidentifiedImageError
 import os
 
-# Función para descargar el archivo desde una URL
+# Función para descargar el archivo desde una URL (si es necesario)
 def download_file(url, filename):
     r = requests.get(url)
     with open(filename, 'wb') as f:
@@ -34,6 +34,7 @@ st.set_page_config(page_title="Classificador Gats vs Gossos", layout="centered")
 st.title("🐶 Classificador de Gossos i Gats 🐱")
 st.markdown("Puja una imatge i la IA et dirà si veu un gos o un gat! 🧠")
 
+# Subir imagen
 uploaded_file = st.file_uploader("📤 Pujar imatge (jpg, png)", type=["jpg", "jpeg", "png"])
 
 if uploaded_file:
@@ -57,4 +58,3 @@ if uploaded_file:
 
     except UnidentifiedImageError:
         st.error("❌ No s'ha pogut llegir la imatge. Si us plau, puja un arxiu .jpg o .png vàlid.")
-
