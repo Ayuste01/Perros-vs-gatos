@@ -31,11 +31,11 @@ model.load_weights("model_gats_gossos.weights.h5")
 
 # Configuración de la página
 st.set_page_config(page_title="Classificador Gats vs Gossos", layout="centered")
-st.title("🐶 Classificador de Gossos i Gats 🐱")
-st.markdown("Puja una imatge i la IA et dirà si veu un gos o un gat! 🧠")
+st.title("🐶 Gos o Gat?🐱")
+st.markdown("Puja la teva imatge i la IA et dirà si veu un gos o un gat! 🧠")
 
 # Subir imagen
-uploaded_file = st.file_uploader("📤 Pujar imatge (jpg, png)", type=["jpg", "jpeg", "png"])
+uploaded_file = st.file_uploader("📤 Puja la imatge! (jpg, png)", type=["jpg", "jpeg", "png"])
 
 if uploaded_file:
     try:
@@ -58,3 +58,4 @@ if uploaded_file:
 
     except UnidentifiedImageError:
         st.error("❌ No s'ha pogut llegir la imatge. Si us plau, puja un arxiu .jpg o .png vàlid.")
+        #Hola albert este es mi easter egg =)
