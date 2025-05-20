@@ -30,7 +30,7 @@ model = model_from_json(model_json)
 model.load_weights("model_gats_gossos.weights.h5")
 
 # Configuración de la página
-st.set_page_config(page_title="Classificador Gats vs Gossos", layout="centered")
+st.set_page_config(page_title="🐶 Gos o Gat?🐱", layout="centered")
 st.title("🐶 Gos o Gat?🐱")
 st.markdown("Puja la teva imatge i la IA et dirà si veu un gos o un gat! 🧠")
 
@@ -57,5 +57,5 @@ if uploaded_file:
             st.success(f"És un **gat** 🐱 amb {(1 - prob)*100:.2f}% de confiança!")
 
     except UnidentifiedImageError:
-        st.error("❌ No s'ha pogut llegir la imatge. Si us plau, puja un arxiu .jpg o .png vàlid.")
+        st.error("❌ No s'ha pogut llegir la imatge. No entenc una altre extensió a part de .jpg o .png!")
         #Hola albert este es mi easter egg =)
